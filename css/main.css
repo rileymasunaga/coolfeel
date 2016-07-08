@@ -290,6 +290,8 @@ visibility: hidden;
     background-color: white;
     height: 300px;
 position: absolute;
+left: 2em;
+top:2em;
 z-index: 1;
 clear: both
 }
@@ -321,7 +323,7 @@ clear: both
     text-transform: uppercase;
     font-weight: bold;
     display:none;
-    /*Start hidden - allow fadeToggle*/
+    /*Start hidden - allow fadeToggle   */
 
 
 }
@@ -334,7 +336,10 @@ clear: both
   }
 @media (max-width: 750px) {
     .sidebar{
-        padding-top: 2em;}
+        left: 0;
+        top: 0;
+        height:inherit;
+    }
     #togglebar{
         visibility: visible;
        }
