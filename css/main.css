@@ -319,7 +319,10 @@ clear: both
     padding-right: 5em;
     font-size: 1em;
     text-transform: uppercase;
-    font-weight: bold
+    font-weight: bold;
+    display:none;
+    /*Start hidden - allow fadeToggle*/
+
 
 }
   #credits {
