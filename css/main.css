@@ -1,10 +1,12 @@
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -17,6 +19,7 @@ html {
     background-color: #e6e6e6;
     overflow: hidden;
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -36,6 +39,7 @@ html {
     text-shadow: none;
 }
 
+
 /*
  * A better looking default horizontal rule
  */
@@ -48,6 +52,7 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -64,6 +69,7 @@ video {
     vertical-align: middle;
 }
 
+
 /*
  * Remove default fieldset styles.
  */
@@ -74,6 +80,7 @@ fieldset {
     padding: 0;
 }
 
+
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -81,6 +88,7 @@ fieldset {
 textarea {
     resize: vertical;
 }
+
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -93,29 +101,16 @@ textarea {
     padding: 0.2em 0;
 }
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 
 /*
  * Hide visually and from screen readers
@@ -124,6 +119,7 @@ textarea {
 .hidden {
     display: none !important;
 }
+
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -141,6 +137,7 @@ textarea {
     width: 1px;
 }
 
+
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
@@ -157,6 +154,7 @@ textarea {
     width: auto;
 }
 
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
@@ -164,6 +162,7 @@ textarea {
 .invisible {
     visibility: hidden;
 }
+
 
 /*
  * Clearfix: contain floats
@@ -179,13 +178,16 @@ textarea {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
     clear: both;
 }
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -198,11 +200,12 @@ textarea {
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
+
 
 /* ==========================================================================
    Print styles.
@@ -217,105 +220,118 @@ textarea {
     *:first-letter,
     *:first-line {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
     }
 }
 
+#togglebar{
+    padding: .4em;
+    background-color: white;
+z-index: 50;
+max-width:245px;
+box-shadow:0 3px 60px 0px grey; 
+position: absolute;
+visibility: hidden;
+}
 .sidebar {
-    float: right;
+    float: left;
     padding: 1em;
-    background-color:white;
-    z-index: 5;
-    height:400px;
-    position:fixed;
-    
+    background-color: white;
+    height: 400px;
+    max-width: 220px;
+position: absolute;
+z-index: 1;
+clear: both
+box-shadow:0 90px 60px 0px grey; 
+}
+.sidebar h1{
+    line-height: 10px;
 }
 
+.sidebar p{
+    font-size: 11px;
+    line-height: 17px;
+}
 
 .block {
     float: left;
-    width:100%;
+    width: 100%;
     background-color: red;
-    color:white;
-    z-index: 0  ;
-    position:relative;
+    color: white;
+    z-index: -10;
+    position: relative;
     clear: all;
     text-align: right;
     height: 100vh;
     display: block;
 }
 
-
-.block p{
+.block p {
     padding-right: 5em;
     font-size: 1em;
     text-transform: uppercase;
-    font-weight:bold
+    font-weight: bold
+
+}
+#toggle{
+
 }
 
-.block i{
-    padding-right: 5em;
-    font-size: 1em;
+@media (max-width: 750px) {
+    .sidebar{
+        padding-top: 2em;}
+    #togglebar{
+        visibility: visible;
+    }
 }
