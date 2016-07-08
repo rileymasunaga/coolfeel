@@ -339,7 +339,7 @@ clear: both
         left: 0;
         top: 0;
         height:inherit;
-    }
+        }
     #togglebar{
         visibility: visible;
        }
