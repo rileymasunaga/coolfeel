@@ -285,15 +285,13 @@ position: absolute;
 visibility: hidden;
 }
 .sidebar {
-    float: left;
-    padding: 1em;
+    float: right;
+    padding: 1.6em;
     background-color: white;
-    height: 400px;
-    max-width: 220px;
+    height: 300px;
 position: absolute;
 z-index: 1;
 clear: both
-box-shadow:0 90px 60px 0px grey; 
 }
 .sidebar h1{
     line-height: 10px;
@@ -301,7 +299,7 @@ box-shadow:0 90px 60px 0px grey;
 
 .sidebar p{
     font-size: 11px;
-    line-height: 17px;
+    line-height: 10px;
 }
 
 .block {
@@ -324,14 +322,21 @@ box-shadow:0 90px 60px 0px grey;
     font-weight: bold
 
 }
-#toggle{
-
-}
-
+  #credits {
+    position: fixed;
+    bottom: 2em;
+    right: 3em;
+    color:grey;
+    font-size: 12px;
+  }
 @media (max-width: 750px) {
     .sidebar{
         padding-top: 2em;}
     #togglebar{
         visibility: visible;
+       }
+    #credits{
+        font-size:  9px;
+        }
     }
 }
